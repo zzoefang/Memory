@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#17293a">
+  <meta name="description" content="纪念外公与外婆，收藏一家人的照片、故事与思念。">
+  <title>外公与外婆｜我们的记忆</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2317293a'/%3E%3Cpath d='M19 38c8-2 11-7 13-17 2 10 5 15 13 17-8 2-11 6-13 12-2-6-5-10-13-12Z' fill='%23e2b96f'/%3E%3C/svg%3E">
+  <style>
+    :root{--ink:#17293a;--paper:#f7f3eb;--cream:#fffdf8;--gold:#c9974d;--soft:#dfe8eb;--muted:#65727b}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:"Songti SC","STSong","Noto Serif SC",Georgia,serif;line-height:1.8}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#183148 0.55px,transparent .55px);background-size:7px 7px}
+    a{color:inherit}
+    .shell{width:min(1100px,calc(100% - 40px));margin:auto;position:relative}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;font-family:system-ui,sans-serif;font-size:.88rem;letter-spacing:.08em}
+    .mark{display:flex;align-items:center;gap:10px;font-weight:650}
+    .star{width:24px;height:24px;border:1px solid var(--gold);transform:rotate(45deg);display:grid;place-items:center}
+    .star:after{content:"";width:5px;height:5px;background:var(--gold);border-radius:50%}
+    .navlinks{display:flex;gap:24px}.navlinks a{text-decoration:none;color:var(--muted)}
+    header{min-height:78vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:8vw;padding:56px 0 100px}
+    .eyebrow{font-family:system-ui,sans-serif;color:#8a642d;letter-spacing:.2em;font-size:.78rem;text-transform:uppercase}
+    h1{font-size:clamp(3rem,8vw,6.8rem);font-weight:400;line-height:1.08;letter-spacing:.02em;margin:20px 0 26px}
+    .lead{font-size:clamp(1.05rem,2vw,1.28rem);max-width:560px;color:#43535e}
+    .date{margin-top:40px;font-family:system-ui,sans-serif;font-size:.82rem;letter-spacing:.13em;color:var(--muted)}
+    .portrait{position:relative;aspect-ratio:4/3;background:var(--ink);border-radius:46% 46% 8px 8px;overflow:hidden;box-shadow:18px 20px 0 var(--soft)}
+    .portrait img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+    section{padding:100px 0;border-top:1px solid #d8d3ca}
+    .section-head{display:grid;grid-template-columns:.7fr 1.3fr;gap:40px;margin-bottom:58px}
+    h2{font-size:clamp(2rem,5vw,3.6rem);font-weight:400;line-height:1.25;margin:0}
+    .section-head p{margin:8px 0 0;color:var(--muted);max-width:570px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{min-height:280px;background:var(--cream);padding:34px;border:1px solid #e1dcd2;display:flex;flex-direction:column;justify-content:space-between}
+    .card:nth-child(2){transform:translateY(24px);background:var(--ink);color:white}
+    .num{font-family:system-ui,sans-serif;color:var(--gold);font-size:.78rem;letter-spacing:.12em}
+    .card h3{font-size:1.45rem;font-weight:400;margin:35px 0 10px}.card p{margin:0;color:var(--muted)}
+    .card:nth-child(2) p{color:#bac5cb}
+    .legacy-words{margin-top:58px;background:var(--cream);border:1px solid #e1dcd2;border-left:4px solid var(--gold);padding:clamp(32px,6vw,58px)}
+    .legacy-words .writing-meta{margin-bottom:24px}.legacy-words blockquote{font-size:clamp(1.2rem,2.5vw,1.65rem);line-height:1.75;margin:0;color:#314552}
+    .legacy-words blockquote+blockquote{border-top:1px solid #e1dcd2;margin-top:28px;padding-top:28px}
+    .legacy-source{font-family:system-ui,sans-serif;color:var(--muted);font-size:.85rem;margin:28px 0 0}
+    .together{background:var(--ink);color:#f8f1e5;margin:70px 0 0;padding:clamp(44px,8vw,90px);display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .orbit{aspect-ratio:1;position:relative;display:grid;place-items:center}
+    .orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(226,185,111,.45);border-radius:50%}
+    .orbit:before{inset:4%}.orbit:after{inset:25%}
+    .orbit b{font-weight:400;font-size:1.45rem;z-index:1;text-align:center}
+    blockquote{font-size:clamp(1.65rem,4vw,2.8rem);line-height:1.55;margin:0}
+    .note{color:#b8c2c8;margin-top:28px;font-size:.95rem}
+    .writings{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
+    .featured-writing{background:var(--cream);border:1px solid #e1dcd2;padding:clamp(34px,6vw,62px);position:relative}
+    .featured-writing:before{content:"“";position:absolute;right:30px;top:4px;font-size:7rem;line-height:1;color:rgba(201,151,77,.2)}
+    .writing-meta{font-family:system-ui,sans-serif;color:#8a642d;font-size:.78rem;letter-spacing:.12em}
+    .writing-title{font-size:clamp(1.55rem,3vw,2.25rem);font-weight:400;margin:25px 0 18px}
+    .excerpt{font-size:1.12rem;color:#43535e;max-width:660px;margin:0 0 28px}
+    .read-more{display:inline-flex;align-items:center;gap:10px;font-family:system-ui,sans-serif;font-size:.88rem;text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:4px}
+    .read-more[aria-disabled="true"]{color:var(--muted);border-color:#cfc9bf;cursor:default}
+    .writing-list{background:var(--ink);color:#f8f1e5;padding:34px}
+    .writing-list h3{font-size:1.3rem;font-weight:400;margin:0 0 22px}
+    .writing-item{padding:18px 0;border-top:1px solid rgba(255,255,255,.16)}
+    .writing-item strong{font-size:1rem;font-weight:400}.writing-item small{display:block;color:#aebbc2;margin-top:5px;font-family:system-ui,sans-serif}
+    .writing-item a{text-decoration:none;display:block}.writing-item a:hover strong,.writing-item a:focus-visible strong{color:#e2b96f}
+    .archive-note{color:#b8c2c8;font-size:.9rem;margin:22px 0 0}
+    .full-article{margin-top:18px;background:var(--cream);border:1px solid #e1dcd2}
+    .full-article summary{list-style:none;cursor:pointer;padding:20px 28px;font-family:system-ui,sans-serif;font-size:.92rem;color:#6d4d20;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .full-article summary::-webkit-details-marker{display:none}
+    .full-article summary:after{content:"＋";font-size:1.25rem;font-weight:300}.full-article[open] summary:after{content:"－"}
+    .article-body{border-top:1px solid #e1dcd2;padding:clamp(30px,6vw,64px);max-width:820px;margin:auto}
+    .article-body h3{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:400;margin:0 0 34px;text-align:center}
+    .article-kicker{text-align:center;color:#8a642d;font-family:system-ui,sans-serif;font-size:.82rem;letter-spacing:.08em;margin:-22px 0 34px}
+    .article-body p{margin:0 0 1.45em;text-indent:2em;color:#384a56;font-size:1.05rem;line-height:2}
+    .article-body p:first-of-type{text-indent:0}.article-body p:first-of-type:first-letter{font-size:3.3rem;float:left;line-height:.9;padding:9px 10px 0 0;color:var(--gold)}
+    .article-body .salutation:first-letter{font-size:inherit;float:none;line-height:inherit;padding:0;color:inherit}.signature{text-align:right}
+    .letters{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .letter{background:var(--cream);padding:40px;border-top:3px solid var(--gold);min-height:270px}
+    .letter p{color:#596873}.letter em{font-size:.82rem;color:#8a642d;font-style:normal;letter-spacing:.1em}
+    .guestbook{margin-top:48px;display:grid;grid-template-columns:.88fr 1.12fr;gap:18px;align-items:start}
+    .guestbook-form,.guestbook-entries{background:var(--cream);border:1px solid #e1dcd2;padding:clamp(26px,4vw,40px)}
+    .guestbook h3{font-size:1.45rem;font-weight:400;margin:0 0 10px}.guestbook-intro{margin:0 0 24px;color:#596873}
+    .message-form{display:grid;gap:16px}.message-form label{display:grid;gap:7px;font-family:system-ui,sans-serif;font-size:.9rem;color:#43535e}
+    .message-form input,.message-form textarea{width:100%;border:1px solid #d8d3ca;background:#fffefa;color:var(--ink);font:inherit;padding:11px 12px;border-radius:0;outline:none}
+    .message-form textarea{min-height:150px;resize:vertical;line-height:1.7}.message-form input:focus,.message-form textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,151,77,.13)}
+    .guestbook-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:2px}.guestbook button{border:0;cursor:pointer;font:600 .9rem system-ui,sans-serif;padding:11px 15px;background:var(--ink);color:#fffdf8}.guestbook button.secondary{background:transparent;color:#6d4d20;border:1px solid var(--gold)}
+    .form-status{min-height:1.5em;margin:0;color:#65727b;font-size:.86rem}.backup-note{margin:4px 0 0;color:#65727b;font-size:.82rem}
+    .guestbook-entries{min-height:260px}.message-list{display:grid;gap:14px;margin-top:22px}.guest-entry{border-top:1px solid #e1dcd2;padding-top:16px}.guest-entry:first-child{border-top:0;padding-top:0}
+    .entry-meta{font-family:system-ui,sans-serif;font-size:.82rem;color:#8a642d;letter-spacing:.04em}.guest-entry p{white-space:pre-wrap;margin:7px 0 0;color:#43535e}.empty-messages{margin:0;color:var(--muted)}
+    footer{text-align:center;padding:90px 20px 60px;color:var(--muted)}
+    footer .closing{font-size:1.3rem;color:var(--ink);margin-bottom:12px}
+    @media(max-width:760px){
+      .shell{width:min(100% - 28px,620px)}.navlinks{display:none}
+      header{grid-template-columns:1fr;min-height:auto;padding:40px 0 80px}.portrait{width:86%;margin:25px auto 0}
+      .section-head,.together{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.card:nth-child(2){transform:none}
+      .writings,.letters,.guestbook{grid-template-columns:1fr}section{padding:72px 0}.together{gap:38px;margin-top:40px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav aria-label="页面导航">
+      <div class="mark"><i class="star" aria-hidden="true"></i> 我们的记忆</div>
+      <div class="navlinks"><a href="#stories">记得</a><a href="#writings">他的文字</a><a href="#together">相伴</a><a href="#letters">想说的话</a></div>
+    </nav>
+    <header>
+      <div>
+        <div class="eyebrow">In loving memory · 永远怀念</div>
+        <h1>外公<br>与外婆</h1>
+        <p class="lead">有些告别不会带走爱。我们把共同走过的日子留在这里，也把没来得及说完的话，慢慢说给你们听。</p>
+        <div class="date">一 个 属 于 全 家 人 的 记 忆 角 落</div>
+      </div>
+      <div class="portrait">
+        <img src="memorial-photo.png" alt="外公与外婆并肩坐在一起的合影">
+      </div>
+    </header>
+
+    <section id="stories">
+      <div class="section-head">
+        <h2>我们记得</h2>
+        <p>一个人的一生，留在许多细小的瞬间里。先为这些记忆留出位置，等家人一起把真实的故事慢慢补上。</p>
+      </div>
+      <div class="cards">
+        <article class="card"><span class="num">01 · 他的人生智慧</span><div><h3>外公教会我们的事</h3><p>成熟地面对得失，珍惜真挚友谊，播种善良、常怀感恩；热爱工作，坚持学习，也懂得从音乐、运动与自然中获得宁静。以勇气承受生活，以从容守住快乐和健康。</p></div></article>
+        <article class="card"><span class="num">02 · 一起的日子</span><div><h3>全家人的共同回忆</h3><p>前半生，他与外婆相濡以沫，在艰辛中养大三姐妹；后半生，他与病痛从容相处，十余年不改对生活的热爱。</p></div></article>
+        <article class="card"><span class="num">03 · 留下的爱</span><div><h3>他仍在我们身上</h3><p>他给予的爱与力量，会继续陪着一家人走很远。</p></div></article>
+      </div>
+      <div class="legacy-words">
+        <div class="writing-meta">外公留下的话 · 给我们的力量</div>
+        <blockquote>“为别人而活，怀着一颗爱心活着，这是一种动力，这种力量会比单单自己求生存所产生的力量大得多。”</blockquote>
+        <blockquote>“人生有苦又有乐，但作为你自己，一定要想办法让乐多于苦，所以我们要让感情服从理智。这还不是一件很简单的事情，需要付出许多毅力和智慧去努力。”</blockquote>
+        <p class="legacy-source">摘自外公的文章</p>
+      </div>
+    </section>
+
+    <section id="writings">
+      <div class="section-head">
+        <h2>外公的文字</h2>
+        <p>外公喜欢写文章。那些写下来的见闻、思考与心情，是他留给我们的一种声音，也让后来的人仍能从字里行间认识他。</p>
+      </div>
+      <div class="writings">
+        <article class="featured-writing">
+          <div class="writing-meta">文章摘录</div>
+          <h3 class="writing-title">一树枇杷一树金</h3>
+          <p class="excerpt">又到了枇杷飘香的季节。记忆中，外公家的院子里，一进大门偏西就有一棵高大的枇杷树，兀自挺立在那里，见证着院子里的四季更迭，情感变化。</p>
+          <a class="read-more" href="#full-loquat" onclick="document.getElementById('full-loquat').open=true">阅读全文 ↓</a>
+        </article>
+        <aside class="writing-list" aria-label="外公的文章目录">
+          <h3>文章收藏</h3>
+          <div class="writing-item"><a href="#full-loquat" onclick="document.getElementById('full-loquat').open=true"><strong>一树枇杷一树金</strong><small>童年的枇杷树、家人与旧日时光</small></a></div>
+          <div class="writing-item"><a href="#full-couple" onclick="document.getElementById('full-couple').open=true"><strong>恩爱夫妻苦也甜</strong><small>纪念企平大姐 · 编辑于 2019-3-27</small></a></div>
+          <div class="writing-item"><a href="#full-letter" onclick="document.getElementById('full-letter').open=true"><strong>给周文忠姐夫的一封信</strong><small>写给文忠大哥 · 编辑于 2017-10-6</small></a></div>
+          <p class="archive-note">“即使今后的日子再苦，素芳也不会埋怨的，恩爱夫妻苦也甜嘛！”</p>
+        </aside>
+      </div>
+      <details class="full-article" id="full-loquat">
+        <summary>展开《一树枇杷一树金》全文</summary>
+        <article class="article-body">
+          <h3>一树枇杷一树金</h3>
+          <p>又到了枇杷飘香的季节，那年我只有三岁多一点，妈妈带着我坐连棚车去了一趟外公家。记忆中，外公家的院子里，一进大门偏西就有一棵高大的枇杷树，兀自挺立在那里，见证着院子里的四季更迭，情感变化。</p>
+          <p>那次去外公家，正好到了枇杷成熟的季节。此时的那棵枇杷树，宛如一位盛装的新娘，满树的金黄果实，一颗颗圆润饱满，如同一串串金色的宝石，镶嵌在翠绿的枝头。微风吹过，枇杷轻轻晃动，发出沙沙的声响，仿佛在诉说着丰收的喜悦。</p>
+          <p>此时的我，迫不及待地来到枇杷树下，望着满树的果实，垂涎欲滴。大舅妈拿来长长的竹竿，轻轻敲打树枝，一颗颗枇杷便纷纷落下，如同下了一场金色的雨。我和表哥表姐们欢呼着，奔跑着，争抢着地上的枇杷，剥开那薄薄的果皮，露出晶莹剔透的果肉，放入口中，轻轻一咬，酸甜的汁水瞬间溢满口腔，那美妙的滋味，至今仍让我回味无穷。</p>
+          <p>外公家是个大家庭，大外公一家有舅舅、舅妈和大表哥大表嫂，我习惯称呼他们大舅舅、大舅妈。我的外公家人口多，外婆去世得早，我没见过，舅舅、舅妈、孩子也多。我妈妈姐妹五人，妈带我去外公家的那一年，她们已经有四人出嫁了，还有小姨正在读书。这样的家庭真正算得上是“九居世泽，百忍家声”了。</p>
+          <p>外公见我们到了，特地到一个叫斜路口的地方，定做了一炉烧饼，也许是油和酥放得多吧，吃起来又香又脆，至今还让我回味无穷。</p>
+          <p>当时我的爸爸就在离外公家不远的老户小学教书，我的大表哥也在那所学校做老师。那天爸爸将我驼在他的背上去学校玩，我跟着大表姐（企平当时可能读小学一年级）一起进教室，大表哥特地安排我坐在大表姐旁边，听他讲课，下课后许多小朋友围着我看，课余我跟着他们成了小尾巴。</p>
+          <p>那天晚上回到外公家里，发起了高烧，咳嗽不止，舅妈摘下几片枇杷叶，洗净后与冰糖一起炖煮，熬成一碗浓稠的枇杷叶汤。那略带苦涩的味道，却有着神奇的功效，喝了几次，高烧和咳嗽便渐渐好转。枇杷树，用它的一生，为我们带来了无尽的美好。枇杷不仅味道鲜美，还具有极高的药用价值。《本草纲目》中记载：“枇杷能润五脏，滋心肺。”</p>
+          <p>枇杷树的叶子，大而厚实，呈深绿色，边缘有着细小的锯齿，表面光滑，背面却布满了一层细细的绒毛。一年四季，它总是郁郁葱葱，即使在寒冬腊月，当其他落叶乔木都已褪去华裳，它依旧傲然挺立，展现着生命的坚韧。那深绿的叶子，似一个个绿色的音符，谱写着大自然的乐章。</p>
+          <p>枇杷果是我童年最美味的水果，枇杷树又是我们童年的欢乐源泉。我们在树下嬉戏玩耍，捉迷藏，欢笑声回荡在院子的每一个角落。</p>
+          <p>如今，每当我想起童年的时光，脑海中总会浮现出那棵枇杷树的身影，它承载着我太多的回忆与情感，是我心中永远的珍宝。</p>
+          <p>枇杷花的绽放，是一场与寒冬的对话，是对生命的礼赞。它不与百花在春日争艳，却选择在最寒冷的时候，展示自己的美丽与坚韧。这让我不禁想起身边的普通人，他们或许默默无闻，但他们却以自己的方式，诠释着生命的意义。</p>
+        </article>
+      </details>
+      <details class="full-article" id="full-couple">
+        <summary>展开《恩爱夫妻苦也甜》全文</summary>
+        <article class="article-body">
+          <h3>恩爱夫妻苦也甜</h3>
+          <div class="article-kicker">纪念企平大姐 · 编辑于 2019-3-27 14:04</div>
+          <p>昨天，在微信群里，看到大家纪念企平姐的信息，我一直沉默着，我是个性格孤僻的人，不愿意跟在大家后面垫气氛。但是“此时无声胜有声”的压抑也是难受的，压得我喘不过气来，最后决定，用文字来表达我对姐姐的哀思。</p>
+          <p>下面我先从五十多年前，在南京的一篇日记中，摘录部分内容：</p>
+          <p>【今天是大年初二，在五姨家吃过早饭，遵照年前企平姐姐的约定，我准时去了梅园新村。舅舅、舅妈、大姐、二姐都在，我一进门，刚坐下来，大姐当着大家的面就问，“明业，你是来找素芳的吧？”二姐庆和立即说，“我的傻大姐，素芳没来南京，难道明业还能不知道？”两位姐姐我是不怕的，可是当着舅舅、舅妈的面，我被羞得面红耳赤。</p>
+          <p>大姐见我脸皮嫩，有点下不了台的样子，就把我喊到一个小房间里，反手关上房门，问：“你和素芳的关系，现在怎么样了？”我僵在那里，不好意思说。</p>
+          <p>“你说啊，告诉我，要讲老实话，我是你的大表姐啊。”我还是僵在那里，因为确实没有勇气、也不知道怎么回答。大姐首先表态了，“如果你俩都愿意，我支持你们；否则，我们大家就不再提这事了，可是我对我大孃（我的母亲）怎样交待呢？我可是跟着大孃在你们沈家庄长大的呀。”</p>
+          <p>我终于开口简单地说了一句：“我俩发过誓，海枯石烂心不变。”</p>
+          <p>大姐一听，高兴了，“那好，我告诉你吧，我娘把你俩的事情，早就告诉我了，她是完全同意的，可是老头子即一直被瞒着，娘从来也没有告诉过他，今天当着你的面，请老头子表态，看他怎么说。”我着急了，“大姐，千万不能这样做。你也知道，我现在的处境非常难，这是大家都知道的。再说，当着我的面，如果舅舅不同意，我怎么下台？”</p>
+          <p>大姐说：“你想那么多干啥？你们这一关迟早总是要过的，舍得一身剐，敢把皇帝拉下马！别怕。今天是好机会，别犹豫！现在我们就去和老头子摊牌去。”</p>
+          <p>大姐先开口了，“父和娘今天正好都在这里，素芳和明业的事，你俩是什么意见？”</p>
+          <p>舅妈很厉害，来了个先发制人，一锤定音，“哎哟，老亲做亲，大孃待人又不恶，素芳嫁给明业，将来的日子肯定好过，好的，好的。”平时我去老户庄，舅妈对我既热情又关怀，她早就看出了我和素芳的关系，她的态度是“纵容”的，这也许是因为爱女儿，而产生的“爱屋及乌”心理吧。</p>
+          <p>舅舅说，“这事，还是放一放吧。”</p>
+          <p>舅妈不依，“不行，你要说明了，到底是同意还是不同意？”</p>
+          <p>舅舅愣了好久，被舅妈逼得没法，长长叹了一口气，“你叫我怎么说啊？这个是我的外甥，那个是我的女儿，手心手背都是肉啊，目前明业这个情况，我同意了，就是把素芳送进了火坑；我不同意，又害了明业……”</p>
+          <p>这时企平姐接着说：“父啊，只要他们双方自愿，周瑜打黄盖，一个愿打一个愿挨，依我看——还让他们自己去决定吧。即使今后的日子再苦，素芳也不会埋怨的，恩爱夫妻苦也甜嘛！”</p>
+          <p>舅妈又说，“宣儿（大姐的小名）说得不错。明业现在没有家，不会永远没有家的。会选女婿的，选儿郎；不会选女婿的，选门堂。嫁个呆女婿，万贯家财也没用。有路鸭子有路水，我不担心他们将来没日子过。人穷，不会穷一世；人发，也发不过三代！我不为他们担心。”</p>
+          <p>后来舅舅说：“还是顺其自然吧，让他们自己决定。”】</p>
+          <p>后来我们结婚了，结婚那天，不声不响，冷冷清清，一个客人也没有。那段日子，我们的生活确实清苦得可以，住房是向村小学借的一间教室，烧火吃饭的灶是自己垒的，坐的板凳也是借来的，白天到生产队出工，晚上回家，稀饭也喝不饱，胡萝卜充饥……婚后十天左右，大姐和二姐从遥远的北方，每人给我们寄来20块钱。二姐庆和把钱夹在《毛主席语录》那个红本子里寄来的。大姐在汇款单的简短附言中，写了这样的话：“艰苦奋斗，勤俭过日子，大姐祝愿你们幸福！大姐想你们。”这就是伟大的家族精神中的姐妹之情；素芳拿着那张汇款单，嚎啕大哭，我站在那里也掩面而泣。患难夫妻，情深似海。</p>
+          <p>九十年代，我们到潍坊看望小玲，小玲在大姐的关怀下，不但被扶上路，还要送一程，我和素芳对大姐感恩戴德。每逢我们对她说一句感激的话，她就说：“别说了，谁让我是你们的大姐呢？”</p>
+          <p>有一次，王厚强约请大姐、文忠、我和素芳在宾馆吃饭，我告诉大姐：“我们不去，请你向厚强打个招呼，我们实在过意不去。我与厚强又面生，也从未交往过，第一次见面就让他破费。千万不能。”为这事，大姐两次找我，“没事的，又不是别人，王厚强是我女婿。包括厚强自己，就是我们五个人，一个外人也没有，连苏飞也不参加。去！没商量。”我们盛情难却，只能硬着头皮跟在大姐后面出席。在酒席上，厚强很客气，也很热情，谈笑风生。喝的是茅台酒，菜也丰盛。大姐见我很拘谨，在桌子下面踢踢我的脚，说，“素芳，你自由自在点啊，随便吃。”我的好大姐啊，你太了解我的心理和性格了。我从来就不愿意增加别人的麻烦，有许多次你曾批评我：“充畅汉，怕求人，家里饿断嗓子，外面摇断膀子。”</p>
+          <p>2009年冬天，素芳和我住在潍坊泰华公寓，大姐每天都要从很远的家里来看我们，有时等不上公交，就步行过来，跑得满脸汗。我说“大姐，往后你就不要跑了，我们到你家里去玩——”我的话还没说完，她放的背包里的手机响了，大姐连忙掏出来接听：“嗯，嗯，没事，你担心做什么？我还没有到你想像中的那么老呢，脑子还是好使的……今晚我不回家吃饭，等会儿就乘公交车，陪你三姨和姨父到虞河路那个烧鸡店吃烧鸡去。”她关掉手机说，“苏飞来打的，放她娘的屁，怕老娘跑丢了，我是几十年的老潍坊了，闲操心。”</p>
+          <p>待她说完，素芳羡慕地说：“苏飞孝顺，大姐真有福气。”大姐很得意：“嗯，苏飞心好，她经常给我买吃的，冰箱里不仅满满的，而是装得挤挤的。”</p>
+          <p>我说：“大姐，你要有自知之明，要服老啊，苏飞想得周到，可怜天下儿女心……今晚我和素芳绝对不会跟你走，晚上七点半有一场篮球赛，你就在这里吃晚饭，然后素芳送你回家，就睡你那儿，这样还为你省下一笔招待费。”</p>
+          <p>“呸，你一天到晚就是钱钱钱，守财奴，钱不花留着做什么？和你舅舅一个样！明业，我对你说啊，你今天不要再做鬼了，不去不行，我们聊会儿就走，一起吃烧鸡去。”</p>
+          <p>后来我们还是去了，那天晚上，我们边吃边聊，聊得海阔天空。大姐特别开心，她说，“我也过了一段苦日子，那时候，周文忠成了右派，我有苦对谁说啊，在娘和父面前，我闭口不提，在学校要上课，要管学生、回家还要处理家务事，但是，我和老周是恩爱夫妻，恩爱夫妻苦也甜……”</p>
+          <p>后来我们就回家了，那次分别，竟成了永诀。敬爱的大姐，我和素芳怎么能不伤心！</p>
+          <p>大姐啊，对我来说，你是我终生难忘的贵人。“贵人”之贵，不在其地位、名声、权势、财力，而在于其与人为善、助人为乐的精神。而一个人在他的生命历程中行走，有幸得贵人之助，于逆境中可克难解难、逢凶化吉，在奋发图强时则可借力加速，登山攀峰，进入一片更为灿烂的境地。</p>
+          <p>大姐，你将让我怀念终生，你永远活在我的心中。</p>
+        </article>
+      </details>
+      <details class="full-article" id="full-letter">
+        <summary>展开《给周文忠姐夫的一封信》全文</summary>
+        <article class="article-body">
+          <h3>给周文忠姐夫的一封信</h3>
+          <div class="article-kicker">编辑于 2017-10-6 19:07</div>
+          <p class="salutation">文忠大哥：</p>
+          <p>时间过得真快，大姐离开我们已经整整两年了。两年前我过生日那天，大姐还给我打来电话，并查问我的病情，嘱咐我要及时到南京去复查。可是八天后的晚上，在电话中惊闻大姐离世的消息，这简直是晴天霹雳，我痛苦得什么也说不出，只能默默流泪，一切尽在不言中。</p>
+          <p>如今在我的眼前，大姐的音容笑貌依然宛在；大姐的谆谆嘱咐，仍然回响在我的耳畔。每当我对大姐表示感激之情的时候，她总是亲切地说：“谢什么！我是谁？我是你大姐啊！”如今再也听不到大姐爽朗而熟悉的笑声了。大姐，我永远怀念你。</p>
+          <p>大姐“铁肩担道义”的担当精神是永远值得我们学习的。当姐夫被打成“右派分子”之后，她一个人默默承受着很大的政治压力，对自己的父母双亲和弟妹们一直保密，直到大姐夫平反昭雪之后，大姐才把这个秘密公布于众。大姐对党的信仰是坚定不移的，始终以一个共产党员的标准勤奋工作，不但赢得了学生的爱戴还赢得了同事的尊重。</p>
+          <p>大姐“长姐如母亲”责任心和慈母心是感人至深的。她对弟妹们的工作、学习、健康的关心是无微不至的，对弟妹们的孩子一视同仁，视如己出，关怀备至。我的体会尤为深刻：大姐和姐夫，对我一家人来说，既是亲人、恩人又是贵人，你们对我的帮助是无私的，上世纪八十年代初，国家还处于困难时期，老百姓无论是吃的还是住的都紧张，你们自己又有三个孩子，生活本来就不宽裕，还把小玲带到你们身边生活，实在不易啊。孩子能创出今天这样的局面，和你们的教育、抚养是分不开的。大姐永远活在我的心中，我永远感激她。</p>
+          <p>大姐走得这样突然，太出其不意了，无论是谁都很难面对。听说你悲痛欲绝，完全被这件事情拖垮了，很消沉，很长时间沉陷在这件事里，走不出来。当时，我想立即打电话劝劝你，让你倾诉内心的悲痛，也为你分担一点痛苦。但我转念一想，又觉得此举不妥，我估计你暂时难以转弯，劝你的话也不容易听得进去，于是我决定还是让你冷静一段时间再说。</p>
+          <p>俗话说“少年夫妻老来伴”，但是又有几对夫妻能够一起终老归天呢？总有一个先走后走的问题。大姐一走，就你一个人了，家的主体就应该是后代了，自己就成家属了，这种感觉难免糟糕。</p>
+          <p>人生丧偶既然是不可避免的，那我们就必须承受这种打击。生老病死是很自然的事。话又得说回来，人毕竟是有感情的，老伴的去世，悲痛难过在所难免，再加上又来得这样突然。那么，我们怎么来面对这人生的不幸呢？</p>
+          <p>现在大姐逝世两周年已过，我也不能为了回避痛苦，老是这样沉默寡言了。为了增强你活下去的信心，尽量把自己的晚年生活过得舒心一点，我想跟你交换几点意见：</p>
+          <p>第一，大姐的突然去世，让你悲痛欲绝，甚至恨不得就跟着大姐一起走了算了。你这就陷入了一个误区，因为在千百万人里，也没有谁真的在亲人去世以后马上就跟着走了的。既然前提是你不可能跟着他走，你还要活，那么你最大的问题就是今后如何活。</p>
+          <p>这就出来第二个问题了——你愁眉苦脸地活是活，从这件事情中走出来，把它变成人生中的积极的因素活着也是活。这就需要你用很冷静的头脑去想，“我这样做有用没用？”——如果你伤心，成天地哭，能把爱人哭活过来，那你就哭吧。问题是这没用。你伤心，不采取积极的手段摆脱悲哀，就只能自己把自己拖垮了。所以说你要活，那就得好好地活。</p>
+          <p>第三，好好活下去的力量从哪里来？任何事情，不要只想到自己，还要想到别人。要把自己跟周围一个群体的生活相联系，多想想大家，你的力量就会出来了。由于你陷入悲哀、伤痛，而让大家都为你揪心；你把自己拖垮的同时也把其他亲人拖垮了，你心安吗？虽然老伴走了，但你还有儿女啊，难道你能放心丢下儿女不管？你这样想，你就会更多地得到一些力量。为别人而活，怀着一颗爱心活着，这是一种动力，这种力量会比单单自己求生存所产生的力量大得多。如果你没有把视野放宽到你的亲人身上，而是仅仅局限在自己身上，你克服困难的力量就很小。</p>
+          <p>第四，如果你没有什么好挂念的了，你好好活着的动力从哪里来呢？那你就多为死者本人想想，她是长期跟你生活在一起的，是你最亲爱的人，她要是活着，她希望你怎么样呢？善良的大姐姐肯定是希望你好好地活着，她希望你生活得积极向上，健康、快乐、幸福。她现在走了，作为大姐夫的你，就这样挫伤你自己、糟践自己，死者在九泉之下能心安吗？你就应该让她这样焦虑吗？你多往这个方面去想，就算再没有亲爱的老伴了，也能找到好好活下去的动力。</p>
+          <p>第五，时间是医治创伤的最好良药，不能让这种消沉的情绪老是重复。跳出这种不良情绪的怪圈，当然允许有一段时间来过渡，但是绝不能今天跳出来了，明天又跌进去了，要用人的理性来控制情绪。</p>
+          <p>文忠大哥，丧失期不论丧失什么都是正常的，但不论丧失什么都不能丧失积极的心态。人的生活质量在很大程度上是由心态决定的，心态好，生活质量就高。人生有苦又有乐，但作为你自己，一定要想办法让乐多于苦，所以我们要让感情服从理智。这还不是一件很简单的事情，需要付出许多毅力和智慧去努力。</p>
+          <p>结合以上的这几点想法，我盼望你能很快就有一个调整，在生活中尽快振作起来。走出伤痛，活得幸福、健康长寿。这不仅我个人的愿望，也是全体亲人的愿望。</p>
+          <p>祝安康！</p>
+          <p class="signature">老弟明业<br>2017-10-4</p>
+        </article>
+      </details>
+    </section>
+
+    <section id="together">
+      <div class="together">
+        <div class="orbit"><b>外公 · 外婆<br><small>再次相伴</small></b></div>
+        <div>
+          <blockquote>“外婆先走了三年。现在，外公也去到了她在的地方。”</blockquote>
+          <p class="note">愿他们在另一个世界重逢，不再有病痛，依旧彼此陪伴。我们在这里想念，也在往后的日子里继续爱着他们。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="letters">
+      <div class="section-head">
+        <h2>想对你们说</h2>
+        <p>思念不用写得完整。几句话、一段旧事，或只是一声“我想你们了”，都可以留在这里。</p>
+      </div>
+      <div class="letters">
+        <article class="letter"><em>给外公</em><p>外公，昨天我们和你告别了。现在还不知道该怎样习惯你不在的日子。谢谢你爱了我们这么久。这里会慢慢装满关于你的回忆。</p></article>
+        <article class="letter"><em>给外婆</em><p>外婆，三年了，我们依然常常想起你。请替我们抱抱外公。愿你们终于又能坐在一起，说说这些年没说完的话。</p></article>
+      </div>
+      <div class="guestbook">
+        <div class="guestbook-form">
+          <h3>留下几句话</h3>
+          <p class="guestbook-intro">写下想对他们说的话，或一段想被记住的回忆。</p>
+          <form class="message-form" id="message-form">
+            <label>署名<input id="message-name" name="name" maxlength="40" autocomplete="name" required></label>
+            <label>留言日期<input id="message-date" name="date" type="date" required></label>
+            <label>留言<textarea id="message-text" name="message" maxlength="800" placeholder="慢慢写，不必完整。" required></textarea></label>
+            <div class="guestbook-actions"><button type="submit">留下留言</button><button type="button" class="secondary" id="download-backup">下载备份</button></div>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+            <p class="backup-note">留言会保存在这台设备上，同时保留一份本地备份。</p>
+          </form>
+        </div>
+        <div class="guestbook-entries">
+          <h3>家人的留言</h3>
+          <div class="message-list" id="message-list" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <div class="closing">思念不会结束，它只是换了一种陪伴的方式。</div>
+    <div>外公与外婆，永远在我们心里。</div>
+  </footer>
+  <script>
+    (() => {
+      const entriesKey = "waigong-waipo-guestbook-entries";
+      const backupKey = "waigong-waipo-guestbook-backup";
+      const form = document.getElementById("message-form");
+      const nameInput = document.getElementById("message-name");
+      const dateInput = document.getElementById("message-date");
+      const messageInput = document.getElementById("message-text");
+      const list = document.getElementById("message-list");
+      const status = document.getElementById("form-status");
+      const backupButton = document.getElementById("download-backup");
+
+      const today = new Date();
+      dateInput.value = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
+
+      function readEntries() {
+        try {
+          const saved = JSON.parse(localStorage.getItem(entriesKey) || "[]");
+          return Array.isArray(saved) ? saved : [];
+        } catch (error) {
+          return [];
+        }
+      }
+
+      function writeEntries(entries) {
+        const backup = { savedAt: new Date().toISOString(), entries };
+        localStorage.setItem(entriesKey, JSON.stringify(entries));
+        localStorage.setItem(backupKey, JSON.stringify(backup));
+      }
+
+      function render(entries) {
+        list.replaceChildren();
+        if (!entries.length) {
+          const empty = document.createElement("p");
+          empty.className = "empty-messages";
+          empty.textContent = "第一句想念，留给你。";
+          list.append(empty);
+          return;
+        }
+        entries.slice().reverse().forEach((entry) => {
+          const item = document.createElement("article");
+          item.className = "guest-entry";
+          const meta = document.createElement("div");
+          meta.className = "entry-meta";
+          meta.textContent = `${entry.name} · ${entry.date}`;
+          const text = document.createElement("p");
+          text.textContent = entry.message;
+          item.append(meta, text);
+          list.append(item);
+        });
+      }
+
+      let entries = readEntries();
+      render(entries);
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = nameInput.value.trim();
+        const date = dateInput.value;
+        const message = messageInput.value.trim();
+        if (!name || !date || !message) return;
+        entries.push({ name, date, message, createdAt: new Date().toISOString() });
+        try {
+          writeEntries(entries);
+          render(entries);
+          messageInput.value = "";
+          status.textContent = "留言已留下，也已存入本地备份。";
+        } catch (error) {
+          entries.pop();
+          status.textContent = "这台设备暂时无法保存留言，请下载备份后再试。";
+        }
+      });
+
+      backupButton.addEventListener("click", () => {
+        const data = localStorage.getItem(backupKey) || JSON.stringify({ savedAt: new Date().toISOString(), entries });
+        const blob = new Blob([data], { type: "application/json;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "waigong-waipo-liuyan-backup.json";
+        link.click();
+        URL.revokeObjectURL(url);
+        status.textContent = "备份已下载。";
+      });
+    })();
+  </script>
+</body>
+</html>
